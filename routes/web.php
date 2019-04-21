@@ -16,10 +16,12 @@ Route::get('/', function () {
     //return '<h1>Hello Foo</h1>';
 });
 
-Route::get('/', ['as' => 'home', function () {
-    return '제 이름은 "home"입니다.';
-}]);
+Route::get('/', function () {
+    return view('welcome')->with('name', 'Foo');
+}); //with(); name이라는 변수명으로 Foo라는 값을 넣어서 welcome 블레이드로 보냄
 
-Route::get('/home', function() {
-    return redirect(route('home'));
+Route::get('/', function () {
+    return view('welcome', [
+        'name'=>'Foo',
+    ]);
 });
