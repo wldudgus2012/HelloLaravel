@@ -27,7 +27,7 @@ Route::get('/', function () {
 });
 
 Route::get('/', function() {
-    $items = ['apple', 'banana', 'tomato'];
-
+   // $items = ['apple', 'banana', 'tomato'];
+    $items = [];
     return view('welcome', ['items' => $items]);
 });
