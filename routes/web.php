@@ -25,3 +25,9 @@ Route::get('/', function () {
         'name'=>'Foo',
     ]);
 });
+
+Route::get('/', function() {
+    $items = ['apple', 'banana', 'tomato'];
+
+    return view('welcome', ['items' => $items]);
+});
